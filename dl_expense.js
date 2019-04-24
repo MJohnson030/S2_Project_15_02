@@ -31,8 +31,26 @@
       
 */
 
+window.addEventListener("load", function () {
+      var changingCells = document.getElementById("travelExp").oninput;
 
+      for (var i = 0; i < changingCells; i++) {
+            changingCells[i].onchange = calcExp;
+      }
 
+      document.getElementById("submitButton").onclick = validateSummary;
+
+});
+
+function calcClass(sumClass) {
+      var sumFields = document.getElementsByClassName("sumClass");
+      var sumTotal = 0;
+
+      for (var i = 0; i < sumFields.length; i++) {
+            var itemValue = parseFloat(sumFields[i].value);
+            if (!isNaN(itemValue)) {}
+      }
+}
 
 
 function formatNumber(val, decimals) {
